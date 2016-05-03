@@ -437,8 +437,8 @@ public class CcsClient {
                 handleIncomingDataMessage(msg);
                 // Send ACK to CCS
                 String apiKey = "AIzaSyDe3sP0gw7edfbrzt1Olr_UNp1ZxHprtzI";
-                //Content content = createContent(msg);
-                //Post2Gcm.post(apiKey, content);
+                Content content = createContent(msg);
+                Post2Gcm.post(apiKey, content);
                 String ack = createJsonAck(msg.getFrom(), msg.getMessageId());
                 send(ack);
             }
